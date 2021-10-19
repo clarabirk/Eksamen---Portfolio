@@ -1,0 +1,500 @@
+/* ---------- root variables ---------- */
+:root {
+  --light-green: rgb(172, 198, 201);
+}
+
+/* ------------ HEADER ------------ */
+.logo {
+  width: 50px;
+  margin-top: 20px;
+  float: left;
+  margin-left: -580px;
+  position: absolute;
+}
+
+/* ---------- general styling ---------- */
+html,
+body {
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+  background-color: white;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- page styling ---------- */
+.page {
+  display: block;
+  /*min heigh is screen heigh minus height of tab and top bar */
+  min-height: calc(100vh - 110px);
+  background: var(--light-grey);
+  animation: fadeIn 0.4s;
+  /* padding equals height of tabbar and topbar */
+  padding: 55px 0;
+}
+
+/* ---------- topbar styling ---------- */
+.topbar {
+  background-color: var(--green);
+  color: var(--text-color-light);
+  padding: 13.5px;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* ---------- tabbar styling ---------- */
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+
+.navbar{
+  top: 0px;
+  z-index: 9999;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar h2 {
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+.mobileiconlabel {
+  display: inline-block;
+  margin-top: 20px;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-size: 1.2rem;
+  padding: 10px 5px;
+}
+
+.menuitem {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.active_menuitem {
+  border-radius: 5px;
+  border: solid 2px lightgray;
+}
+
+.cta_style {
+  background-color: white;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Hide checkbox and menuitems until clicked */
+.menuitems__container,
+.mobileicon {
+  display: none;
+}
+
+/* Show menuitems when mobileicon-label is clicked */
+.navbar input:checked ~ .menuitems__container {
+  display: block;
+  margin-right: 0px;
+}
+
+.menuitems__container {
+  margin-right: 90px;
+}
+
+/* --------- Billede og tekst på forsiden --------*/
+.forside_billede {
+  width: 25%;
+  float: left;
+  margin-left: 10px;
+  margin-top: -49px;
+}
+
+.forside_tekst {
+  margin-top: 10px;
+  padding: 15px;
+  margin-left: 300px;
+}
+
+.tekst_billede {
+  margin-top: 140px;
+  padding: 30px;
+  width: 90%;
+  margin-left: 30px;
+  background-color: #DDD2BF;
+}
+
+.button_læsmere {
+  padding: 8px;
+  font-family: "PT Serif", serif;
+  border: 4px;
+  border: 1px solid white;
+  margin-right: 30px;
+  color: #9e866c;
+  margin-bottom: 10px;
+}
+
+/* --------- Billeder på forsiden -------- */
+.image_forside {
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+/* ----- Parallax -------- */
+.parallax {
+  background: url(../img/ally.jpeg);
+  background-attachment: fixed;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 60px;
+  margin-bottom: -30px;
+}
+
+/* ----- Overskrift portfolio ------ */
+
+.overskrift_portfolio {
+  margin-top: 10px;
+}
+
+/* Gridbox Portfolio */
+.image_portfolio {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.5;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #9e866c;
+  color: white;
+  font-size: 16px;
+  padding: 10px 25px;
+}
+/* ------ Mellemled Portfolio -----*/
+
+.mellemled_portfolio {
+  margin-top: 30px;
+  width: 100%;
+}
+
+/*------- Tekstbokse Portfolio -------*/
+
+.outer_flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  margin-top: 50px;
+}
+
+.flexbox_heading {
+  text-align: center;
+  color: #333333;
+  font-family: "PT Serif", serif;
+  font-size: 1.5rem;
+  line-height: 1.85rem;
+}
+
+.section_text {
+  color: #333333;
+  font-family: "PT Serif", serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: -10px;
+}
+
+.flexbox {
+  border: 2.5px solid #c6bda8;
+  margin: 5px;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: transform 0.5s;
+  width: 25%;
+  background-color: #9e866c;
+}
+
+.flexbox:hover {
+  -ms-transform: scale(1.075);
+  -webkit-transform: scale(1.075);
+  transform: scale(1.075);
+  cursor: pointer;
+}
+
+/* ------- Mig selv ------- */
+
+.billede_mig {
+  width: 20%;
+  float: left;
+  margin-left: 70px;
+}
+
+.billede_mig2 {
+  width: 20%;
+  float: left;
+  margin-left: -30px;
+  margin-top: 90px;
+}
+
+.text_mig {
+  margin-right: 40px;
+  margin-top: 110px;
+  margin-left: 600px;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+
+/* --------- Billeder på Mig siden -------- */
+.overskirft_mig {
+  margin-top: 70px;
+}
+
+.grid-container1 {
+  display: flex;
+  text-align: center;
+  grid-template-areas: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px 6px;
+  margin-top: 40px;
+  grid-template-areas:
+    "celle1 celle2 celle3"
+    ". . ."
+    ". . .";
+}
+
+.celle_1 {
+  margin: 25px;
+  margin-bottom: 10px;
+  grid-area: celle1;
+}
+
+.celle_2 {
+  margin: 25px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  grid-area: celle2;
+}
+
+.celle_3 {
+  margin: 25px;
+  margin-top: 2px;
+  margin-right: 30px;
+  grid-area: celle3;
+}
+
+.guide_link2 {
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #9e866c;
+}
+
+.billede_1 {
+  width: 25%;
+}
+
+.billede_2 {
+  width: 20%;
+  margin-bottom: 5px;
+}
+
+.billede_3 {
+  width: 20%;
+  margin-bottom: 5px;
+}
+/* ----- Page footer ----- */
+
+.page_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  border-top: 1px solid #9e866c;
+  padding-top: 20px;
+  padding: 40px;
+  color: #9e866c;
+  font-family: "PT Serif", serif;
+  background-color: white;
+}
+
+.footer_card_heading {
+  margin-bottom: 5px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.address {
+  font-size: 15px;
+}
+
+.footer_card:first-child .footer_card_heading {
+  margin-bottom: 5px;
+}
+
+.some_image {
+  width: 40px;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding-bottom: 45px;
+    z-index: 9999;
+  }
+
+  .mobileiconlabel {
+    display: inline-block;
+    margin-top: 10px;
+    font-style: normal;
+    font-size: 1.2rem;
+    padding: 10px 5px;
+    margin-right: -250px;
+  }
+
+  .menuitem {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-right: 5px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .active_menuitem {
+    color: lightgray;
+    border-radius: 5px;
+  }
+
+  .cta_style {
+    background-color: lightgray;
+    color: white;
+    border-radius: 10px;
+  }
+
+  /* Hide checkbox and menuitems until clicked */
+  .menuitems__container,
+  .mobileicon {
+    display: none;
+  }
+
+  /* Show menuitems when mobileicon-label is clicked */
+  .navbar input:checked ~ .menuitems__container {
+    display: block;
+  }
+
+  .logo {
+    width: 40px;
+    margin-left: -40px;
+  }
+
+  .menuitems__container {
+    margin-right: 60px;
+  }
+}
+
+/* Add rules [ON WIDE SCREENS] */
+
+@media only screen and (min-width: 900px) {
+
+  .mobileiconlabel,
+  .mobileicon {
+    display: none;
+  }
+
+  .menuitems__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+  }
+
+  .menuitem {
+    width: 180px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .menuitem:hover {
+    background-color: lightgray;
+    color: white;
+    border-radius: 5px;
+  } 
+
+  .outer_flexbox {
+    flex-direction: row;
+  }
+
+  .header_flexbox {
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+  }}
